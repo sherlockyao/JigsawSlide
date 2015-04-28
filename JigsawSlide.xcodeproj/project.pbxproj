@@ -14,6 +14,8 @@
 		36489C801AE89C3B008E9D2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36489C7F1AE89C3B008E9D2E /* Images.xcassets */; };
 		36489C831AE89C3B008E9D2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36489C811AE89C3B008E9D2E /* LaunchScreen.xib */; };
 		36489C8F1AE89C3B008E9D2E /* JigsawSlideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36489C8E1AE89C3B008E9D2E /* JigsawSlideTests.swift */; };
+		36A24B791AEF568D008A9CBD /* SKTextureRegularRectInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A24B781AEF568D008A9CBD /* SKTextureRegularRectInit.swift */; };
+		36A24B7C1AEF5966008A9CBD /* JigsawPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A24B7B1AEF5966008A9CBD /* JigsawPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		36489C881AE89C3B008E9D2E /* JigsawSlideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JigsawSlideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36489C8D1AE89C3B008E9D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36489C8E1AE89C3B008E9D2E /* JigsawSlideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JigsawSlideTests.swift; sourceTree = "<group>"; };
+		36A24B781AEF568D008A9CBD /* SKTextureRegularRectInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureRegularRectInit.swift; sourceTree = "<group>"; };
+		36A24B7B1AEF5966008A9CBD /* JigsawPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JigsawPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				36489C741AE89C3B008E9D2E /* AppDelegate.swift */,
 				36489C781AE89C3B008E9D2E /* GameScene.swift */,
 				36489C7A1AE89C3B008E9D2E /* GameViewController.swift */,
+				36A24B7B1AEF5966008A9CBD /* JigsawPanel.swift */,
+				36A24B7A1AEF56B4008A9CBD /* Extensions */,
 				36489C7C1AE89C3B008E9D2E /* Main.storyboard */,
 				36489C7F1AE89C3B008E9D2E /* Images.xcassets */,
 				36489C811AE89C3B008E9D2E /* LaunchScreen.xib */,
@@ -113,6 +119,14 @@
 				36489C8D1AE89C3B008E9D2E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36A24B7A1AEF56B4008A9CBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				36A24B781AEF568D008A9CBD /* SKTextureRegularRectInit.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A24B791AEF568D008A9CBD /* SKTextureRegularRectInit.swift in Sources */,
 				36489C791AE89C3B008E9D2E /* GameScene.swift in Sources */,
+				36A24B7C1AEF5966008A9CBD /* JigsawPanel.swift in Sources */,
 				36489C7B1AE89C3B008E9D2E /* GameViewController.swift in Sources */,
 				36489C751AE89C3B008E9D2E /* AppDelegate.swift in Sources */,
 			);
@@ -413,6 +429,7 @@
 				36489C941AE89C3B008E9D2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36489C951AE89C3B008E9D2E /* Build configuration list for PBXNativeTarget "JigsawSlideTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +438,7 @@
 				36489C971AE89C3B008E9D2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
