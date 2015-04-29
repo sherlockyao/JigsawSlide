@@ -68,6 +68,11 @@ class GameScene: SKScene {
                 let rect = CGRect(x: width * CGFloat(column), y: height * CGFloat(row), width: width, height: height)
                 let node = SKSpriteNode(texture: SKTexture(regularRect: rect, inTexture: texture), size: CGSize(width: 80, height: 80))
                 node.position = CGPoint(x: 80 * CGFloat(column) + xOffset, y: 80 * CGFloat(row) + yOffset)
+                
+                let borderNode = SKShapeNode(path: CGPathCreateWithRect(CGRectMake(-40, -40, 80, 80), nil))
+                borderNode.strokeColor = SKColor.whiteColor()
+                node.addChild(borderNode)
+                
                 nodes.append(node)
             }
         }
@@ -86,7 +91,7 @@ class GameScene: SKScene {
     }
     
     private func nodeAtPosition(position: (Int, Int)) -> SKNode {
-        return nodeAtPoint(pointOfPosition(position))
+        return nodeAtPoint(pointOfPosition(position)).parent!
     }
     
     private func pointOfPosition(position: (Int, Int)) -> CGPoint {
