@@ -11,6 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     
     var jigsawPanel: JigsawPanel!
+    var touchLocation: CGPoint?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -26,19 +27,35 @@ class GameScene: SKScene {
     }
   
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        /* Called when a touch begins */
- 
+        if 1 < touches.count {
+            return
+        }
+        let touch = touches.first as! UITouch
+        touchLocation = touch.locationInNode(self)
+    }
+    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let startLocation = touchLocation {
+            let touch = touches.first as! UITouch
+            let endLocation = touch.locationInNode(self)
+            let dx = endLocation.x - startLocation.x
+            let dy = endLocation.y - startLocation.y
+            // seems the coordinate is different from Sprit Kit system
+            if fabs(dy) < fabs(dx) {
+                tryPanelMove((0 < dx) ? .Left : .Right)
+            } else {
+                tryPanelMove((0 < dy) ? .Down : .Up)
+            }
+        }
     }
    
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
     }
     
-    func createJigsawNodes() -> [SKNode] {
+    private func createJigsawNodes() -> [SKNode] {
         let xOffset: CGFloat = 60;
         let yOffset: CGFloat = 100;
         
@@ -55,5 +72,26 @@ class GameScene: SKScene {
             }
         }
         return nodes
+    }
+    
+    private func tryPanelMove(move: JigsawMove) {
+        let (resultPanel, success) = jigsawPanel.makeMove(move)
+        if success {
+            let node = nodeAtPosition(resultPanel.slotPosition)
+            let point = pointOfPosition(jigsawPanel.slotPosition)
+            let action = SKAction.moveTo(point, duration: 0.2)
+            node.runAction(action)
+            jigsawPanel = resultPanel
+        }
+    }
+    
+    private func nodeAtPosition(position: (Int, Int)) -> SKNode {
+        return nodeAtPoint(pointOfPosition(position))
+    }
+    
+    private func pointOfPosition(position: (Int, Int)) -> CGPoint {
+        let x = CGFloat(80 * position.1 + 60)
+        let y = CGFloat(80 * (position.0 - 1) + 100)
+        return CGPoint(x: x, y: y)
     }
 }

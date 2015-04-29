@@ -31,9 +31,9 @@ struct JigsawPanel {
         }
         rowCount = 6
         columnCount = 3
-        slotPosition = (0, 3)
+        slotPosition = (0, 2)
         var blocks = [[JigsawBlock]](count: rowCount, repeatedValue: [JigsawBlock](count: columnCount, repeatedValue: .Rock))
-        blocks[0][3] = .Slot
+        blocks[0][2] = .Slot
         for rowIndex in 1..<rowCount {
             for columnIndex in 0..<columnCount {
                 let index = (rowIndex - 1) * columnCount + columnIndex
