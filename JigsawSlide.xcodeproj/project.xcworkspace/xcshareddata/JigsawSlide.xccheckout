@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F6C0C9B8-D084-4D51-8893-33474B7D4723</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>JigsawSlide</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>DE9272DF25B454ECDB49DA314CB9116FF1EB5812</key>
 		<string>github.com:sherlockyao/JigsawSlide.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JigsawSlide.xcodeproj/project.xcworkspace</string>
+	<string>JigsawSlide.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>DE9272DF25B454ECDB49DA314CB9116FF1EB5812</key>

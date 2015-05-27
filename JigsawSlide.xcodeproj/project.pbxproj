@@ -16,6 +16,7 @@
 		36489C8F1AE89C3B008E9D2E /* JigsawSlideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36489C8E1AE89C3B008E9D2E /* JigsawSlideTests.swift */; };
 		36A24B791AEF568D008A9CBD /* SKTextureRegularRectInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A24B781AEF568D008A9CBD /* SKTextureRegularRectInit.swift */; };
 		36A24B7C1AEF5966008A9CBD /* JigsawPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A24B7B1AEF5966008A9CBD /* JigsawPanel.swift */; };
+		36F7A2F51B15B4CA00979822 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7A2F41B15B4CA00979822 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		36489C8E1AE89C3B008E9D2E /* JigsawSlideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JigsawSlideTests.swift; sourceTree = "<group>"; };
 		36A24B781AEF568D008A9CBD /* SKTextureRegularRectInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureRegularRectInit.swift; sourceTree = "<group>"; };
 		36A24B7B1AEF5966008A9CBD /* JigsawPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JigsawPanel.swift; sourceTree = "<group>"; };
+		36F7A2F41B15B4CA00979822 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Classes/DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +85,7 @@
 		36489C711AE89C3B008E9D2E /* JigsawSlide */ = {
 			isa = PBXGroup;
 			children = (
-				36489C741AE89C3B008E9D2E /* AppDelegate.swift */,
-				36489C781AE89C3B008E9D2E /* GameScene.swift */,
-				36489C7A1AE89C3B008E9D2E /* GameViewController.swift */,
-				36A24B7B1AEF5966008A9CBD /* JigsawPanel.swift */,
-				36A24B7A1AEF56B4008A9CBD /* Extensions */,
-				36489C7C1AE89C3B008E9D2E /* Main.storyboard */,
+				36F7A2F61B15B4D300979822 /* Classes */,
 				36489C7F1AE89C3B008E9D2E /* Images.xcassets */,
 				36489C811AE89C3B008E9D2E /* LaunchScreen.xib */,
 				36489C721AE89C3B008E9D2E /* Supporting Files */,
@@ -127,6 +124,28 @@
 				36A24B781AEF568D008A9CBD /* SKTextureRegularRectInit.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		36F7A2F61B15B4D300979822 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				36F7A2F71B15B4E700979822 /* View Controllers */,
+				36A24B7A1AEF56B4008A9CBD /* Extensions */,
+				36489C741AE89C3B008E9D2E /* AppDelegate.swift */,
+				36489C781AE89C3B008E9D2E /* GameScene.swift */,
+				36A24B7B1AEF5966008A9CBD /* JigsawPanel.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		36F7A2F71B15B4E700979822 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36489C7C1AE89C3B008E9D2E /* Main.storyboard */,
+				36F7A2F41B15B4CA00979822 /* DashboardViewController.swift */,
+				36489C7A1AE89C3B008E9D2E /* GameViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +252,7 @@
 				36489C791AE89C3B008E9D2E /* GameScene.swift in Sources */,
 				36A24B7C1AEF5966008A9CBD /* JigsawPanel.swift in Sources */,
 				36489C7B1AE89C3B008E9D2E /* GameViewController.swift in Sources */,
+				36F7A2F51B15B4CA00979822 /* DashboardViewController.swift in Sources */,
 				36489C751AE89C3B008E9D2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
